@@ -1099,6 +1099,98 @@
       </div>
     </section>
 
+    <section class="hero is-light is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="subtitle-4by4 title center-title is-size-5">Visual Planning with AnimateDiff Only</h2>
+            Although AnimateDiff is generally pretrained on real-world videos, it struggles to produce coherent visual plans for real-robot tasks in specific setups by itself, and thus can hardly achieve any task successes. This highlights the importance of score composition in the SILVR framework, which  enables the integration of task-specific information (e.g. environmental dynamics) through in-domain video models and leads to performant visual planners.
+
+          <div class="columns is-mobile" style="height: 100%">
+            <div class="column is-1 post">
+                <div class="top-row-annotation">
+                    <b>Visual Plan</b>
+                </div>
+                <div class="bot-row-annotation">
+                    <b>Environment Execution</b>
+                </div>
+            </div>
+
+        <div class="column is-11">
+          <div id="results-carousel" class="singular_carousel results-carousel">
+            
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 0</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_0" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/animatediff_only/animatediff_only_orange_video.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_1" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/animatediff_only/animatediff_only_orange_rollout.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"A Robot Arm Pushing the Orange Cup"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 0</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_1" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/animatediff_only/animatediff_only_purple_video.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_1" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/animatediff_only/animatediff_only_purple_rollout.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"A Robot Arm Pushing the Purple Cup"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 0</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/animatediff_only/animatediff_only_yellow_video.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/animatediff_only/animatediff_only_yellow_rollout.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"A Robot Arm Opening the Yellow Drawer"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section class="hero is-light is-small">
       <div class="hero-body">

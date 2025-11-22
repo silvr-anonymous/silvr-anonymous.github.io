@@ -44,6 +44,20 @@ $(document).ready(function () {
   // Initialize all div with carousel class
   var carousels = bulmaCarousel.attach(".carousel", options);
 
+  var singular_options = {
+    slidesToScroll: 1,
+    slidesToShow: 2,
+    loop: true,
+    infinite: true,
+    autoplay: false,
+    pagination: false,
+    autoplaySpeed: 3000,
+  };
+
+  // Initialize all div with carousel class
+  var singular_carousels = bulmaCarousel.attach(".singular_carousel", singular_options);
+
+
   var options_orig = {
     slidesToScroll: 1,
     slidesToShow: 4,
