@@ -1191,6 +1191,208 @@
       </div>
     </section>
 
+    <section class="hero is-light is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="subtitle-4by4 title center-title is-size-5">Corrective Influence of Internet-Scale Video Model Adaptation</h2>
+          We highlight how large-scale pretrained video models can augment an in-domain video model for improved visual planning, particularly in real-world settings.  Whereas an in-domain model can capture environment-specific information accurately, it may struggle to generalize to new behaviors and motions.  In examples below, we visualize how score composition with an internet-pretrained video model such as AnimatDiff can meaningfully improve text-conditioning capabilities (such as correcting chosen color) as well as motions (such as making them smooth and coherent) through score composition.  The result is a high-fidelity visual plan that aligns with novel task instructions and leads to better success rate performance.
+
+          <div class="columns is-mobile" style="height: 100%">
+            <div class="column is-1 post">
+                <div class="top-row-annotation">
+                    <b>Visual Plan</b>
+                </div>
+                <div class="bot-row-annotation">
+                    <b>Environment Execution</b>
+                </div>
+            </div>
+
+        <div class="column is-11">
+          <div id="results-carousel" class="double_carousel results-carousel">
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">In-Domain Only</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/orange-push/rbo_layout_0_in_domain_plan_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/orange-push/rbo_layout_0_in_domain_rollout_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push the Orange Cup"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Adapted w/ AnimateDiff</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/orange-push/rbo_layout_0_plan_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/orange-push/rbo_layout_0_rollout_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push the Orange Cup"</h3>
+                <h3 class="subtitle type_result">&#x2705;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">In-Domain Only</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/purple-push/gbp_layout_0_in_domain_plan_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/purple-push/gbp_layout_0_in_domain_rollout_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push the Purple Cup"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Adapted w/ AnimateDiff</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/purple-push/gbp_layout_0_plan_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/purple-push/gbp_layout_0_rollout_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push the Purple Cup"</h3>
+                <h3 class="subtitle type_result">&#x2705;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">In-Domain Only</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/drawer-open/yg_layout_0_plan_failure_in_domain.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/drawer-open/yg_layout_0_rollout_failure_in_domain.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Open the Yellow Drawer"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Adapted w/ AnimateDiff</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/drawer-open/yg_layout_0_plan_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/drawer-open/yg_layout_0_rollout_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Open the Yellow Drawer"</h3>
+                <h3 class="subtitle type_result">&#x2705;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">In-Domain Only</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_0" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/drawer-close/drawer_close_in_domain_plan_failure.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_1" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/drawer-close/drawer_close_in_domain_rollout_failure.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Drawer Close"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Adapted w/ AnimateDiff</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_1" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/drawer-close/drawer_close_ipa_plan_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_1" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ablation_on_adaptation/drawer-close/drawer_close_ipa_rollout_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Drawer Close"</h3>
+                <h3 class="subtitle type_result">&#x2705;</h3>
+              </div>
+            </div>
+
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section class="hero is-light is-small">
       <div class="hero-body">
