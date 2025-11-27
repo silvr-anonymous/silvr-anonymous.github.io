@@ -1195,7 +1195,7 @@
       <div class="hero-body">
         <div class="container">
           <h2 class="subtitle-4by4 title center-title is-size-5">Corrective Influence of Internet-Scale Video Model Adaptation</h2>
-          We highlight how large-scale pretrained video models can augment an in-domain video model for improved visual planning, particularly in real-world settings.  Whereas an in-domain model can capture environment-specific information accurately, it may struggle to generalize to new behaviors and motions.  In examples below, we visualize how score composition with an internet-pretrained video model such as AnimatDiff can meaningfully improve text-conditioning capabilities (such as correcting chosen color) as well as motions (such as making them smooth and coherent) through score composition.  The result is a high-fidelity visual plan that aligns with novel task instructions and leads to better success rate performance.
+          We highlight how large-scale pretrained video models can augment an in-domain video model for improved visual planning, particularly in real-world settings.  Whereas an in-domain model can capture environment-specific information accurately, it may struggle to generalize to new behaviors and motions.  In examples below, we visualize how score composition with an internet-pretrained video model such as AnimateDiff can meaningfully improve text-conditioning capabilities (such as correcting chosen color) as well as motions (such as making them smooth and coherent) through score composition.  The result is a high-fidelity visual plan that aligns with novel task instructions and leads to better success rate performance.
 
           <div class="columns is-mobile" style="height: 100%">
             <div class="column is-1 post">
@@ -1385,6 +1385,368 @@
                 <h3 class="subtitle type_result">&#x2705;</h3>
               </div>
             </div>
+
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="hero is-light is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="subtitle-4by4 title center-title is-size-5">Failure Cases of Final-Iteration Visual Planners</h2>
+          Below we show the failure cases from the final-iteration visual planners in both real-world and simulated setups. We observe that most failed attempts in real-world settings are caused by semantically incorrect visual plans (e.g., pushing the cup or opening the drawer of wrong colors). We acknowledge that the large-scale video models, despite powerful, have their limitations in generating instruction-aligned visual plans for every task configuration, especially when being constrained in a specific scene. In the simulated setup, we observe a mixture of execution and semantic errors. For example, the "plate-slide" task failed because the plate was obstructed by the net during the execution, even though the visual plan depicts the correct motion; whereas the video model fails to provide an optimal visual plan for solving the "button-press-wall" task.
+          <div class="columns is-mobile" style="height: 100%">
+            <div class="column is-1 post">
+                <div class="top-row-annotation">
+                    <b>Visual Plan</b>
+                </div>
+                <div class="bot-row-annotation">
+                    <b>Environment Execution</b>
+                </div>
+            </div>
+
+        <div class="column is-11">
+          <div id="results-carousel" class="carousel results-carousel">
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 2</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/final_iter/orange/failure_pink_plan_2.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/final_iter/orange/failure_pink_rollout_2.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push the Orange Cup"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 2</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/final_iter/purple/failure_pink_plan_2.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/final_iter/purple/failure_pink_rollout_2.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push the Purple Cup"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 2</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/final_iter/yellow/failure_yr_plan.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/final_iter/yellow/failure_yr_rollout.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Open the Yellow Drawer"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 9</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/final_iter/plate_slide/failure_plate_slide_plan.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/final_iter/plate_slide/failure_plate_slide_rollout.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Plate Slide"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 9</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/final_iter/button_press_wall/failure_button_press_wall_plan.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/final_iter/button_press_wall/failure_button_press_wall_rollout.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Button Press Wall"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="hero is-light is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="subtitle-4by4 title center-title is-size-5">Failure Cases of In-Domain Only over Iterations</h2>
+          We provide the failure cases produced by in-domain video models when being deployed alone in real-world experiments. The Drawer tasks have a worsening trend over iterations, and we visualize a potential example as to why below. Although the visual planner technically successfully opens the yellow drawer at Iteration 0, the execution is completed with an outlier motion; training on such irregular motions may propagate and confuse the subsequent iterations of the in-domain model. Indeed, we see by Iteration 2 that the video plan behaves more erratically and "jumps" towards the yellow drawer. The Cup tasks do not exhibit a strong degradation in performance trend, and suffers more from general lack of improvement; we thus visualize consistent failure modes that suppress the self-improving behaviors across all iterations. In the examples we provided below, the in-domain visual planners consistently selects the cup of an incorrect color to push forward. However, as shown in the previous section "Corrective Influence of Internet-Scale Video Model Adaptation", we show that many of these behaviors can be addressed by adapting with large-scale video models, which are essential for robust self-improvement in the real world.
+          <div class="columns is-mobile" style="height: 100%">
+            <div class="column is-1 post">
+                <div class="top-row-annotation">
+                    <b>Visual Plan</b>
+                </div>
+                <div class="bot-row-annotation">
+                    <b>Environment Execution</b>
+                </div>
+            </div>
+
+        <div class="column is-11">
+          <div id="results-carousel" class="carousel results-carousel">
+            
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 0</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/drawer_in_domain/yr_iter0_plan_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/drawer_in_domain/yr_iter0_rollout_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Open the Yellow Drawer"</h3>
+                <h3 class="subtitle type_result">&#x2705;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 1</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/drawer_in_domain/yr_iter1_plan_failure.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/drawer_in_domain/yr_iter1_rollout_failure.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Open the Yellow Drawer"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 2</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/drawer_in_domain/yr_iter2_plan_failure.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/drawer_in_domain/yr_iter2_rollout_failure.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Open the Yellow Drawer"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+            
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 0</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/orange_in_domain/rbo_iter0_layout_0_in_domain_plan_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/orange_in_domain/rbo_iter0_layout_0_in_domain_rollout_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push the Orange Cup"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 1</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/orange_in_domain/rbo_iter1_layout_0_in_domain_plan_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/orange_in_domain/rbo_iter1_layout_0_in_domain_rollout_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push the Orange Cup"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 2</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/orange_in_domain/rbo_iter2_layout_0_in_domain_plan_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/orange_in_domain/rbo_iter2_layout_0_in_domain_rollout_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push the Orange Cup"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 0</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/purple_in_domain/gbp_iter0_layout_0_in_domain_plan_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/purple_in_domain/gbp_iter0_layout_0_in_domain_rollout_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push the Purple Cup"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 1</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/purple_in_domain/gbp_iter1_layout_0_in_domain_plan_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/purple_in_domain/gbp_iter1_layout_0_in_domain_rollout_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push the Purple Cup"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 2</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/purple_in_domain/gbp_iter2_layout_0_in_domain_plan_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/failure_mode/in_domain/purple_in_domain/gbp_iter2_layout_0_in_domain_rollout_fail.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push the Purple Cup"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            
 
           </div>
           </div>
