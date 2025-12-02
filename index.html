@@ -1393,6 +1393,163 @@
       </div>
     </section>
 
+    <section class="hero is-light is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="subtitle-4by4 title center-title is-size-5">Long-Horizon Task Evaluation</h2>
+          We evaluate our visual planners on long-horizon tasks that require pushing three cups of different colors forward in a text-specified order. Without being finetuned on any long-horizon demonstrations, we show that the self-improved visual planners can robustly solve the task by consecutively executing the three atomic cup-push subtasks decomposed from the original complex instruction.
+
+          <div class="columns is-mobile" style="height: 100%">
+            <div class="column is-1 post">
+                <div class="top-row-annotation">
+                    <b>Visual Plan</b>
+                </div>
+                <div class="bot-row-annotation">
+                    <b>Environment Execution</b>
+                </div>
+            </div>
+
+        <div class="column is-11">
+          <div id="results-carousel" class="carousel results-carousel">
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 0</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_horizon/rog_iter0_plan_failure.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_horizon/rog_iter0_rollout_failure.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push Cups in the order of Red, Orange, Green"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 1</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_horizon/rog_iter1_rollout_partial_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_horizon/rog_iter1_rollout_partial_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push Cups in the order of Red, Orange, Green"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 2</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_horizon/rog_iter2_plan_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_horizon/rog_iter2_rollout_success.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push Cups in the order of Red, Orange, Green"</h3>
+                <h3 class="subtitle type_result">&#x2705;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 0</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_horizon/bpg_iter0_plan_failure_2.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_horizon/bpg_iter0_rollout_failure_2.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push Cups in the order of Blue, Purple, Green"</h3>
+                <h3 class="subtitle type_result">&#x274C;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 1</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_horizon/bpg_iter1_plan_success_2.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_horizon/bpg_iter1_rollout_success_2.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push Cups in the order of Blue, Purple, Green"</h3>
+                <h3 class="subtitle type_result">&#x2705;</h3>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="has-text-centered">
+                <h3 class="subtitle header">Iteration 2</h3>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_horizon/bpg_iter2_plan_success_2.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-steve has-background">
+                <video poster="" id="ps_iteration_2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_horizon/bpg_iter2_rollout_success_2.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+              <div class="has-text-centered">
+                <h3 class="subtitle prompt">"Push Cups in the order of Blue, Purple, Green"</h3>
+                <h3 class="subtitle type_result">&#x2705;</h3>
+              </div>
+            </div>
+
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="hero is-light is-small">
       <div class="hero-body">
@@ -1745,16 +1902,14 @@
                 <h3 class="subtitle type_result">&#x274C;</h3>
               </div>
             </div>
-
-            
-
           </div>
           </div>
           </div>
         </div>
       </div>
     </section>
-
+    
+    
 
     <section class="hero is-light is-small">
       <div class="hero-body">
