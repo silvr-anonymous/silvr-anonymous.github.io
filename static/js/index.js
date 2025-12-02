@@ -165,4 +165,22 @@ $(document).ready(function () {
   // $("#interpolation-slider").prop("max", 2);
 
   bulmaSlider.attach();
+
+  // Long-horizon video pause-and-replay behavior
+  var longHorizonVideos = document.querySelectorAll('.long-horizon-video');
+  longHorizonVideos.forEach(function(video) {
+    var overlay = video.parentElement.querySelector('.replay-overlay');
+
+    video.addEventListener('ended', function() {
+      // Show the overlay
+      overlay.classList.add('visible');
+
+      // Wait 1.5 seconds, then restart
+      setTimeout(function() {
+        overlay.classList.remove('visible');
+        video.currentTime = 0;
+        video.play();
+      }, 800);
+    });
+  });
 });
